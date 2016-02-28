@@ -1,0 +1,1 @@
+[28-Feb-2016 21:33:18 UTC] PHP Fatal error:  Class 'AppBundle\Entity\UserRepository' not found in /home/jenningr98/public_html/galactic/vendor/doctrine/orm/lib/Doctrine/ORM/Repository/DefaultRepositoryFactory.php on line 68
