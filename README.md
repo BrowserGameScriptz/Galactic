@@ -1,2 +1,2 @@
-# galactic
-Web based multiplayer space fighter game
+# Galactic
+Mutliplayer Space Combat and Conquest
