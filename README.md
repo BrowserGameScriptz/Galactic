@@ -1,4 +1,2 @@
-galactic
-========
-
-A Symfony project created on February 28, 2016, 2:12 pm.
+# Galactic
+Mutliplayer Space Combat and Conquest
