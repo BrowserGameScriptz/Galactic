@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+body
+{
+    background-color:#000;
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+}
+
+body .wrapper
+{
+    text-align:center;
+}
+
+input
+{
+    font-family: 'PT Sans', sans-serif;
+}
+
+input:focus
+{
+    outline:none;
+}
+
+a
+{
+    text-decoration: none;
+    color:#fff;
+}
+
+a:hover
+{
+    color:#0f0;
+}
+
+
+/* Login Page */
+
+.login input
+{
+    text-align:center;
+    border-radius:10px;
+    padding:5px;
+    border:none;
+    font-size:1em;
+}
+
+.login input[type=submit]
+{
+    border:none;
+    padding:5px 10px 5px 10px;
+    color:#fff;
+    background-color:#000;
+    cursor:pointer;
+}
+
+.login input[type=submit]:hover
+{
+    color:#0f0;
+}
+
+.login .register
+{
+    margin-left:10px;
+}

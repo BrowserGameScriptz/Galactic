@@ -1,0 +1,7 @@
+galactic:
+    resource: "@GalacticBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

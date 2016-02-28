@@ -1,0 +1,3 @@
+galactic_homepage:
+    path:     /
+    defaults: { _controller: GalacticBundle:Default:index }
