@@ -15,8 +15,8 @@ class __TwigTemplate_b2a1445bfbd9b9b8b055ddb56bfbd2b5c5422399c41133f2e41cf7f75e0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c6829a4b66c4183521add098020cf57ae387af7062948a09129b7b673a39cea0 = $this->env->getExtension("native_profiler");
-        $__internal_c6829a4b66c4183521add098020cf57ae387af7062948a09129b7b673a39cea0->enter($__internal_c6829a4b66c4183521add098020cf57ae387af7062948a09129b7b673a39cea0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GalacticBundle:Registration:register.html.twig"));
+        $__internal_a4687e91619b31ac45a8dbd1a255fde9806023c8106593109912b4b8700759fd = $this->env->getExtension("native_profiler");
+        $__internal_a4687e91619b31ac45a8dbd1a255fde9806023c8106593109912b4b8700759fd->enter($__internal_a4687e91619b31ac45a8dbd1a255fde9806023c8106593109912b4b8700759fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GalacticBundle:Registration:register.html.twig"));
 
         // line 1
         echo "
@@ -46,7 +46,7 @@ class __TwigTemplate_b2a1445bfbd9b9b8b055ddb56bfbd2b5c5422399c41133f2e41cf7f75e0
         // line 9
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         
-        $__internal_c6829a4b66c4183521add098020cf57ae387af7062948a09129b7b673a39cea0->leave($__internal_c6829a4b66c4183521add098020cf57ae387af7062948a09129b7b673a39cea0_prof);
+        $__internal_a4687e91619b31ac45a8dbd1a255fde9806023c8106593109912b4b8700759fd->leave($__internal_a4687e91619b31ac45a8dbd1a255fde9806023c8106593109912b4b8700759fd_prof);
 
     }
 

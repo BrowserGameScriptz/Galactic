@@ -28,12 +28,13 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         $request = $this->request;
 
         // galactic_homepage
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'galactic_homepage');
-            }
-
+        if ($pathinfo === '/login') {
             return array (  '_controller' => 'GalacticBundle\\Controller\\DefaultController::indexAction',  '_route' => 'galactic_homepage',);
+        }
+
+        // user_registration
+        if ($pathinfo === '/register') {
+            return array (  '_controller' => 'GalacticBundle\\Controller\\RegistrationController::registerAction',  '_route' => 'user_registration',);
         }
 
         // homepage
