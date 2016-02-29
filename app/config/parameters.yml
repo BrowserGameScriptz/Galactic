@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: galactic
+    database_user: galactic_admin
+    database_password: Jenningr987
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 9bc74f4e4fb8c97a609b0fee057ff7456682c978
