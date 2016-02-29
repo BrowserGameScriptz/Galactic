@@ -1,8 +1,1 @@
-galactic_homepage:
-    path:     /login
-    defaults: { _controller: GalacticBundle:Default:index }
-    
-# app/config/routing.yml
-user_registration:
-    path:     /register
-    defaults: { _controller: GalacticBundle:Registration:register }
+
