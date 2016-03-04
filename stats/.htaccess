@@ -1,0 +1,7 @@
+AuthName "grj.ryanjennings.co.uk statistics"
+AuthType Basic
+AuthUserFile /var/www/domains/grj.ryanjennings.co.uk/.stats-htpasswd
+require valid-user
+<Files .stats-htpasswd>
+deny from all
+</Files>

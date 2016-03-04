@@ -63,3 +63,8 @@ a:hover
 {
     margin-left:10px;
 }
+
+.login p.errors
+{
+    color:#f00;
+}

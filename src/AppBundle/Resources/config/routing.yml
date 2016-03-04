@@ -1,0 +1,7 @@
+login:
+    path:       /login
+    defaults:   { _controller: AppBundle:Security:login }
+    
+register:
+    path:       /register
+    defaults:   { _controller: AppBundle:Security:register }

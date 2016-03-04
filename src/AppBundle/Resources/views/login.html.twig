@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <img src="{{ asset('img/logo.png') }}"/>
+        <div class="login">
+            {% if error %}
+                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+            <form action="{{ path('login') }}" method="post">
+                <p>
+                    <input type="text" name="_username" placeholder="Username">
+                </p>
+                <p>
+                    <input type="password" name="_password" placeholder="Password">
+                </p>
+                <p>
+                    <input type="submit" value="Login"><span><a href="register">Register</a></span>
+                </p>
+            </form>
+        </div>
+    </div>
+{% endblock %}
