@@ -12,7 +12,7 @@ class SecurityController extends Controller
 {
     
     public function loginAction(Request $request)
-    {
+    {        
         $authenticationUtils = $this->get('security.authentication_utils');
     
         // get the login error if there is one
@@ -20,12 +20,15 @@ class SecurityController extends Controller
     
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
+        
+        $registeredUsername = $request->get('username');
     
         return $this->render(
             'AppBundle::login.html.twig',
             array(
                 // last username entered by the user
                 'last_username' => $lastUsername,
+                'registered_username' => $registeredUsername,
                 'error'         => $error,
             )
         );
@@ -52,7 +55,7 @@ class SecurityController extends Controller
             // ... do any other work - like send them an email, etc
             // maybe set a "flash" success message for the user
 
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('login', array('username' => $user->getUsername()));
         }
 
         return $this->render(
