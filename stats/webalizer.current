@@ -1,11 +1,11 @@
-# Webalizer V2.23-08 Incremental Data - 03/03/2016 18:51:55
-2016 3 3 18 51 55
-610 241 2 8 7 4 9604223 458 5 0 0 0
-1 340 340 1 3
+# Webalizer V2.23-08 Incremental Data - 03/04/2016 18:39:38
+2016 3 4 18 39 38
+1717 906 3 15 11 4 33129896 1262 11 0 0 0
+2 2 340 1 4
 10 7 20744 1 8 1 0 0
 257 171 4371410 2 167 3 0 0
 343 63 5212069 1 283 1 0 0
-0 0 0 0 0 0 0 0
+1107 665 23525673 2 804 6 0 0
 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0
@@ -39,19 +39,19 @@
 0 0 0 0 0 0
 0 0 0 0 0 0
 0 0 0 0 0 0
-17 10 48738 11 0 0
-220 143 4268273 142 0 0
+72 36 732087 40 0 0
+322 163 4624554 231 0 0
+144 87 1097841 85 0 0
 0 0 0 0 0 0
 0 0 0 0 0 0
+181 106 4698818 125 0 0
+159 93 1535577 116 0 0
+329 236 14642471 269 0 0
+125 89 499605 80 0 0
 0 0 0 0 0 0
 0 0 0 0 0 0
-0 0 0 0 0 0
-0 0 0 0 0 0
-0 0 0 0 0 0
-0 0 0 0 0 0
-0 0 0 0 0 0
-3 2 8179 2 0 0
-360 79 5258289 295 0 0
+13 8 19473 11 0 0
+362 81 5258726 297 0 0
 10 7 20744 8 0 0
 0 0 0 0 0 0
 0 0 0 0 0 0
@@ -60,7 +60,7 @@
 0
 0
 0
-241
+906
 0
 0
 0
@@ -69,16 +69,16 @@
 0
 0
 2
-246
+546
 0
-5
+19
 0
 0
 0
 1
 0
-46
-34
+134
+42
 0
 0
 0
@@ -92,58 +92,86 @@
 0
 0
 0
-35
+67
 0
 0
 0
 0
 0
 # -urls- 
+/bundles/framework/css/body.css
+0 5 0 15660 0 0 0 0
+/register
+0 10 0 9135 0 0 0 0
 /img/logo.png
-1 6 0 22208 0 0 0 0
+1 21 0 45964 0 0 0 0
 /register/
 0 2 0 1514 0 0 0 0
 /register/confirmed
 0 1 0 606 0 0 0 0
 /favicon.ico
-0 86 0 585614 0 0 0 0
+0 188 0 1280172 0 0 0 0
+/app_dev.php/
+0 2 0 436 0 0 0 0
 /app_dev.php/login
-0 116 0 335336 1 1 0 0
+0 364 0 629710 2 5 0 0
 /css/style.css
-0 15 0 10309 0 0 0 0
+0 99 0 68557 0 0 0 0
+/app_dev.php/register
+0 184 0 15826219 3 0 0 0
+/bundles/framework/css/exception.css
+0 5 0 5525 0 0 0 0
 /login
-0 15 0 9668 0 1 0 0
+0 27 0 17635 0 1 0 0
 /
-0 5 0 9095 3 1 0 0
+0 11 0 10669 5 2 0 0
+/bundles/framework/css/structure.css
+0 5 0 4594 0 0 0 0
+/app_dev.php/_wdt/05179c
+0 1 0 5869 0 0 0 0
 # End Of Table - urls
 # -sites- (monthly)
 82.31.35.156
-0 373 88 5287212 3 1457031115 0 0
-/app_dev.php/login
+0 686 229 7436414 7 1457116778 0 0
+/
+194.80.232.23
+0 794 524 21376471 2 1457100380 0 0
+/login
 194.80.232.20
 0 237 153 4317011 2 1456903898 0 0
 /app_dev.php/login
 # End Of Table - sites (monthly)
 # -sites- (daily)
 82.31.35.156
-0 343 63 5212069 1 1457031115 0 0
-/app_dev.php/login
+0 313 141 2149202 4 1457116778 0 0
+/
+194.80.232.23
+0 794 524 21376471 2 1457100380 0 0
+/login
 # End Of Table - sites (daily)
 # -referrers- 
 http://grj.ryanjennings.co.uk/app_dev.php/login
-0 350
-- (Direct Request)
-0 227
-http://grj.ryanjennings.co.uk/login
+0 477
+http://grj.ryanjennings.co.uk/register
 0 17
+- (Direct Request)
+0 425
+http://grj.ryanjennings.co.uk/login
+0 34
+http://grj.ryanjennings.co.uk/app_dev.php/register
+0 711
 http://grj.ryanjennings.co.uk/register/confirmed
 0 1
 http://grj.ryanjennings.co.uk/register/
 0 2
+http://grj.ryanjennings.co.uk/app_dev.php/registar
+0 5
 http://grj.ryanjennings.co.uk/app_dev.php
 0 5
 http://grj.ryanjennings.co.uk/app_dev.php/
-0 8
+0 38
+http://grj.ryanjennings.co.uk/app_dev.php/r egister
+0 2
 # End Of Table - referrers
 # -agents- 
 Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36
@@ -153,7 +181,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like 
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/601.4.4 (KHTML, like Gecko) Version/9.0.3 Safari/601.4.4
 0 3
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36
-0 343
+0 1450
 # End Of Table - agents
 # -search strings- 
 # End Of Table - search strings

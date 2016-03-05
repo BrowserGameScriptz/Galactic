@@ -1,24 +1,21 @@
-{% extends 'GalacticBundle:base.html.twig' %}
+{% extends 'base.html.twig' %}
 
-{% block title %}Login{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block body %}
-    <div class="wrapper">
-        <div class="logo">
-            <img src="{{ asset('img/logo.png') }}"/>
+    <div id="top-bar">
+        <div id="minimap">
+            <table>
+                {% for row in 1..5 %}
+                <tr>
+                    {% for column in 1..5 %}
+                        <td></td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
         </div>
-        <div class="login">
-            <form>
-                <p>
-                    <input type="text" placeholder="Username"/>
-                </p>
-                <p>
-                    <input type="password" placeholder="Password"/>
-                </p>
-                <p>
-                    <input type="submit" value="Login"/> | <span class="register"><a href="/register">Register</a></span>
-                </p>
-            </form>
-        </div>
+        <div id="notices"></div>
+        <div id="navigation"></div>
     </div>
 {% endblock %}

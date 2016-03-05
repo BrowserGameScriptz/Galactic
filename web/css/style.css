@@ -5,6 +5,8 @@ body
     background-color:#000;
     color: #fff;
     font-family: 'PT Sans', sans-serif;
+    padding:0;
+    margin:0;
 }
 
 body .wrapper
@@ -33,6 +35,10 @@ a:hover
     color:#0f0;
 }
 
+.clear-left
+{
+    clear:left;
+}
 
 /* Login Page */
 
@@ -67,4 +73,46 @@ a:hover
 .login p.errors
 {
     color:#f00;
+}
+
+/* Top Bar */
+#top-bar
+{
+    border-bottom:solid 1px #fff;
+    padding:10px;
+}
+
+#minimap
+{
+    float:left;
+}
+
+#minimap table
+{
+    padding:0;
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+
+#minimap table tr td
+{
+    border:solid 1px #fff;
+    height:30px;
+    width:30px;
+    padding:0;
+}
+
+#notices
+{
+    float:left;
+}
+
+#notices .notice
+{
+    font-size:0.8em;
+}
+
+#navigation
+{
+    float:left;
 }

@@ -23,7 +23,7 @@
 {% endblock %}
 
 {% block form_errors %}
-    <p class="errors"   >
+    <p class="errors">
         {{errors}}
     </p>
 {% endblock %}
@@ -34,24 +34,6 @@
         <img src="{{ asset('img/logo.png') }}"/>
         
         <div class="login">
-            
-            <!--
-            <form name="user" action="register" method="post">
-                <p><input name="user[username]" required="required" placeholder="Username"></p>
-                <p class="errors">{{ form.username.vars.errors }}</p>
-                
-                <p><input name="user[email]" required="required" placeholder="Email"></p>
-                <p class="errors">{{ form.email.vars.errors }}</p>
-                
-                <p><input type="password" name="user[plainPassword][first]" required="required" placeholder="Password"></p>
-                <p class="errors">{{ form.plainPassword.first.vars.errors }}</p>
-                
-                <p><input type="password" name="user[plainPassword][second]" required="required" placeholder="Password"></p>
-                <p class="errors">{{ form.plainPassword.second.vars.errors}}</p>
-                
-                <p><input type="submit" value="Create"></p>
-            </form>
-            -->
             
             {{ form_start(form) }}
                 <p>
