@@ -50,6 +50,26 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(name="is_active", type="boolean")
      */
     private $isActive;
+    
+    /**
+     * @ORM\Column(name="last_login", type="datetime")
+     */
+    private $lastAction;
+    
+    /**
+     * @ORM\Column(name="system", type="integer")
+     */
+    private $system;
+    
+    /**
+     * @ORM\Column(name="x_coords", type="integer")
+     */
+    private $xCoords;
+    
+    /**
+     * @ORM\Column(name="y_coords", type="integer")
+     */
+    private $yCoords;
 
     public function __construct()
     {
@@ -203,5 +223,102 @@ class User implements UserInterface, \Serializable
     public function getIsActive()
     {
         return $this->isActive;
+    }
+
+    /**
+     * Set lastAction
+     *
+     * @param \DateTime $lastAction
+     *
+     * @return User
+     */
+    public function setLastAction($lastAction)
+    {
+        $this->lastAction = $lastAction;
+
+        return $this;
+    }
+
+    /**
+     * Get lastAction
+     *
+     * @return \DateTime
+     */
+    public function getLastAction()
+    {
+        return $this->lastAction;
+    }
+
+
+    /**
+     * Set system
+     *
+     * @param integer $system
+     *
+     * @return User
+     */
+    public function setSystem($system)
+    {
+        $this->system = $system;
+
+        return $this;
+    }
+
+    /**
+     * Get system
+     *
+     * @return integer
+     */
+    public function getSystem()
+    {
+        return $this->system;
+    }
+
+    /**
+     * Set xCoords
+     *
+     * @param integer $xCoords
+     *
+     * @return User
+     */
+    public function setXCoords($xCoords)
+    {
+        $this->xCoords = $xCoords;
+
+        return $this;
+    }
+
+    /**
+     * Get xCoords
+     *
+     * @return integer
+     */
+    public function getXCoords()
+    {
+        return $this->xCoords;
+    }
+
+    /**
+     * Set yCoords
+     *
+     * @param integer $yCoords
+     *
+     * @return User
+     */
+    public function setYCoords($yCoords)
+    {
+        $this->yCoords = $yCoords;
+
+        return $this;
+    }
+
+    /**
+     * Get yCoords
+     *
+     * @return integer
+     */
+    public function getYCoords()
+    {
+        return $this->yCoords;
     }
 }
