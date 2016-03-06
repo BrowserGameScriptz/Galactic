@@ -1,0 +1,20 @@
+GalacticBundle\Entity\Sector:
+    type: entity
+    table: sectors
+    repositoryClass: GalacticBundle\Repository\SectorRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        system:
+            type: integer
+        xCoord:
+            type: integer
+        yCoord:
+            type: integer
+        type:
+            type: integer
+    lifecycleCallbacks: {  }

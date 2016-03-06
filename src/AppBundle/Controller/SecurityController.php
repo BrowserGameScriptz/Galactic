@@ -46,7 +46,16 @@ class SecurityController extends Controller
             
             $password = $this->get('security.password_encoder')
                 ->encodePassword($user, $user->getPlainPassword());
+                
             $user->setPassword($password);
+            $user->setTurns('1000');
+            $user->setProtectedTurns('500');
+            $user->setLevel('1');
+            $user->setXp('0');
+            $user->setSystem('1');
+            $user->setXCoord('10');
+            $user->setYCoord('10');
+            $user->setLastAction(new \DateTime);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);

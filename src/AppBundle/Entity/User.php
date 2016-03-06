@@ -52,7 +52,7 @@ class User implements UserInterface, \Serializable
     private $isActive;
     
     /**
-     * @ORM\Column(name="last_login", type="datetime")
+     * @ORM\Column(name="last_action", type="datetime")
      */
     private $lastAction;
     
@@ -62,14 +62,34 @@ class User implements UserInterface, \Serializable
     private $system;
     
     /**
-     * @ORM\Column(name="x_coords", type="integer")
+     * @ORM\Column(name="x_coord", type="integer")
      */
-    private $xCoords;
+    private $xCoord;
     
     /**
-     * @ORM\Column(name="y_coords", type="integer")
+     * @ORM\Column(name="y_coord", type="integer")
      */
-    private $yCoords;
+    private $yCoord;
+    
+    /**
+     * @ORM\Column(name="turns", type="integer")
+     */
+    private $turns;
+    
+    /**
+     * @ORM\Column(name="protected_turns", type="integer")
+     */
+    private $protectedTurns;
+    
+    /**
+     * @ORM\Column(name="level", type="integer")
+     */
+    private $level;
+    
+    /**
+     * @ORM\Column(name="xp", type="integer")
+     */
+    private $xp;
 
     public function __construct()
     {
@@ -275,50 +295,50 @@ class User implements UserInterface, \Serializable
     }
 
     /**
-     * Set xCoords
+     * Set xCoord
      *
-     * @param integer $xCoords
+     * @param integer $xCoord
      *
      * @return User
      */
-    public function setXCoords($xCoords)
+    public function setXCoord($xCoord)
     {
-        $this->xCoords = $xCoords;
+        $this->xCoord = $xCoord;
 
         return $this;
     }
 
     /**
-     * Get xCoords
+     * Get xCoord
      *
      * @return integer
      */
-    public function getXCoords()
+    public function getXCoord()
     {
-        return $this->xCoords;
+        return $this->xCoord;
     }
 
     /**
-     * Set yCoords
+     * Set yCoord
      *
-     * @param integer $yCoords
+     * @param integer $yCoord
      *
      * @return User
      */
-    public function setYCoords($yCoords)
+    public function setYCoord($yCoord)
     {
-        $this->yCoords = $yCoords;
+        $this->yCoord = $yCoord;
 
         return $this;
     }
 
     /**
-     * Get yCoords
+     * Get yCoord
      *
      * @return integer
      */
-    public function getYCoords()
+    public function getYCoord()
     {
-        return $this->yCoords;
+        return $this->yCoord;
     }
 }
