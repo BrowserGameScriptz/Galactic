@@ -1,0 +1,18 @@
+GalacticBundle\Entity\System:
+    type: entity
+    table: systems
+    repositoryClass: GalacticBundle\Repository\SystemRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        size:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

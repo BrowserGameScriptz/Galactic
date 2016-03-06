@@ -50,6 +50,46 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(name="is_active", type="boolean")
      */
     private $isActive;
+    
+    /**
+     * @ORM\Column(name="last_action", type="datetime")
+     */
+    private $lastAction;
+    
+    /**
+     * @ORM\Column(name="system", type="integer")
+     */
+    private $system;
+    
+    /**
+     * @ORM\Column(name="x_coord", type="integer")
+     */
+    private $xCoord;
+    
+    /**
+     * @ORM\Column(name="y_coord", type="integer")
+     */
+    private $yCoord;
+    
+    /**
+     * @ORM\Column(name="turns", type="integer")
+     */
+    private $turns;
+    
+    /**
+     * @ORM\Column(name="protected_turns", type="integer")
+     */
+    private $protectedTurns;
+    
+    /**
+     * @ORM\Column(name="level", type="integer")
+     */
+    private $level;
+    
+    /**
+     * @ORM\Column(name="xp", type="integer")
+     */
+    private $xp;
 
     public function __construct()
     {
@@ -203,5 +243,102 @@ class User implements UserInterface, \Serializable
     public function getIsActive()
     {
         return $this->isActive;
+    }
+
+    /**
+     * Set lastAction
+     *
+     * @param \DateTime $lastAction
+     *
+     * @return User
+     */
+    public function setLastAction($lastAction)
+    {
+        $this->lastAction = $lastAction;
+
+        return $this;
+    }
+
+    /**
+     * Get lastAction
+     *
+     * @return \DateTime
+     */
+    public function getLastAction()
+    {
+        return $this->lastAction;
+    }
+
+
+    /**
+     * Set system
+     *
+     * @param integer $system
+     *
+     * @return User
+     */
+    public function setSystem($system)
+    {
+        $this->system = $system;
+
+        return $this;
+    }
+
+    /**
+     * Get system
+     *
+     * @return integer
+     */
+    public function getSystem()
+    {
+        return $this->system;
+    }
+
+    /**
+     * Set xCoord
+     *
+     * @param integer $xCoord
+     *
+     * @return User
+     */
+    public function setXCoord($xCoord)
+    {
+        $this->xCoord = $xCoord;
+
+        return $this;
+    }
+
+    /**
+     * Get xCoord
+     *
+     * @return integer
+     */
+    public function getXCoord()
+    {
+        return $this->xCoord;
+    }
+
+    /**
+     * Set yCoord
+     *
+     * @param integer $yCoord
+     *
+     * @return User
+     */
+    public function setYCoord($yCoord)
+    {
+        $this->yCoord = $yCoord;
+
+        return $this;
+    }
+
+    /**
+     * Get yCoord
+     *
+     * @return integer
+     */
+    public function getYCoord()
+    {
+        return $this->yCoord;
     }
 }

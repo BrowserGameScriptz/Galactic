@@ -11,7 +11,7 @@
             {% endif %}
             <form action="{{ path('login') }}" method="post">
                 <p>
-                    <input type="text" name="_username" placeholder="Username">
+                    <input type="text" name="_username" placeholder="Username" {% if(registered_username) %}value="{{registered_username}}"{% endif %}>
                 </p>
                 <p>
                     <input type="password" name="_password" placeholder="Password">
