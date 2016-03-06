@@ -5,3 +5,7 @@ login:
 register:
     path:       /register
     defaults:   { _controller: AppBundle:Security:register }
+    
+test:
+    path:       /test
+    defaults:   { _controller: AppBundle:Security:test }

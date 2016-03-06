@@ -1,3 +1,7 @@
 home:
-    path:      /
-    defaults:  { _controller: GalacticBundle:Default:index }
+    path:   /
+    defaults:   { _controller: GalacticBundle:Default:index }
+    
+moveup:
+    path:   /move/up
+    defaults:   { _controller: GalacticBundle:Navigation:moveUp }
