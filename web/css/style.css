@@ -97,22 +97,45 @@ a:hover
 #minimap table tr td
 {
     border:solid 1px #fff;
-    height:30px;
-    width:30px;
+    height:50px;
+    width:50px;
     padding:0;
+    text-align:center;
+}
+
+#minimap .sector
+{
+    font-size:0.8em;
+}
+
+#minimap .current
+{
+    background-color:#660;
 }
 
 #notices
 {
     float:left;
-}
-
-#notices .notice
-{
-    font-size:0.8em;
+    padding:10px;
 }
 
 #navigation
 {
     float:left;
+}
+
+#navigation table
+{
+    padding:0;
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+
+#navigation table tr td
+{
+    border:solid 1px #fff;
+    height:50px;
+    width:50px;
+    padding:0;
+    text-align:center;
 }

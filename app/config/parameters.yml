@@ -2,7 +2,7 @@
 parameters:
     database_host: 127.0.0.1
     database_port: null
-    database_name: rj
+    database_name: tr
     database_user: galactic_admin
     database_password: Jenningr987
     mailer_transport: smtp

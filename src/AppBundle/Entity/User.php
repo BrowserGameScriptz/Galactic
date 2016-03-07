@@ -90,6 +90,11 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(name="xp", type="integer")
      */
     private $xp;
+    
+    /**
+     * @ORM\Column(name="docked", type="boolean")
+     */
+    private $docked;
 
     public function __construct()
     {
@@ -340,5 +345,125 @@ class User implements UserInterface, \Serializable
     public function getYCoord()
     {
         return $this->yCoord;
+    }
+
+    /**
+     * Set turns
+     *
+     * @param integer $turns
+     *
+     * @return User
+     */
+    public function setTurns($turns)
+    {
+        $this->turns = $turns;
+
+        return $this;
+    }
+
+    /**
+     * Get turns
+     *
+     * @return integer
+     */
+    public function getTurns()
+    {
+        return $this->turns;
+    }
+
+    /**
+     * Set protectedTurns
+     *
+     * @param integer $protectedTurns
+     *
+     * @return User
+     */
+    public function setProtectedTurns($protectedTurns)
+    {
+        $this->protectedTurns = $protectedTurns;
+
+        return $this;
+    }
+
+    /**
+     * Get protectedTurns
+     *
+     * @return integer
+     */
+    public function getProtectedTurns()
+    {
+        return $this->protectedTurns;
+    }
+
+    /**
+     * Set level
+     *
+     * @param integer $level
+     *
+     * @return User
+     */
+    public function setLevel($level)
+    {
+        $this->level = $level;
+
+        return $this;
+    }
+
+    /**
+     * Get level
+     *
+     * @return integer
+     */
+    public function getLevel()
+    {
+        return $this->level;
+    }
+
+    /**
+     * Set xp
+     *
+     * @param integer $xp
+     *
+     * @return User
+     */
+    public function setXp($xp)
+    {
+        $this->xp = $xp;
+
+        return $this;
+    }
+
+    /**
+     * Get xp
+     *
+     * @return integer
+     */
+    public function getXp()
+    {
+        return $this->xp;
+    }
+
+    /**
+     * Set docked
+     *
+     * @param boolean $docked
+     *
+     * @return User
+     */
+    public function setDocked($docked)
+    {
+        $this->docked = $docked;
+
+        return $this;
+    }
+
+    /**
+     * Get docked
+     *
+     * @return boolean
+     */
+    public function getDocked()
+    {
+        return $this->docked;
     }
 }

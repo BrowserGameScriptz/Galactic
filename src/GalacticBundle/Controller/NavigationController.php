@@ -7,83 +7,105 @@ use Symfony\Component\HttpFoundation\Request;
 
 class NavigationController extends Controller
 {
-	protected $system_size;
+	//We set this here so it can be used between functions.
 	protected $user;
 
-	public function __construct()
-	{
-		//Change to get value from db for current user system.
-		$this->system_size = 20;
-	}
-
-    public function moveUpAction()
+    public function moveUpAction($yCoord)
     {
 		$this->user = $this->getUser();
-    	$y_coord = $this->user->getYCoord();
 
-    	if ($y_coord < $this->system_size)
-    	{
-    		$this->user->getYCoord($y_coord++);
-            $this->moveSuccess(1);
-    	}
-    	else
-    	{
-    		// Can't move up
-    	}
+		if($yCoord == $this->user->getYCoord())
+		{
+			if ($yCoord > 1)
+			{
+				$this->user->setYCoord(--$yCoord);
+				$this->moveSuccess();
+			}
+			else
+			{
+				$this->setFlashIllegalMove();
+			}
+		}
+
+		return $this->redirectToRoute('home');
     }
 
-    public function moveDownAction()
+    public function moveDownAction($yCoord)
+    {
+		$this->user = $this->getUser();		
+		$system = $this->getDoctrine()->getRepository('GalacticBundle:System')->find($this->user->getSystem());
+		
+		if($yCoord == $this->user->getYCoord())
+		{
+			if ($yCoord < $system->getSize())
+			{
+				$this->user->setYCoord(++$yCoord);
+				$this->moveSuccess();
+			}
+			else
+			{
+				$this->setFlashIllegalMove();
+			}
+		}
+
+		return $this->redirectToRoute('home');
+    }
+
+    public function moveLeftAction($xCoord)
     {
 		$this->user = $this->getUser();
-    	$y_coord = $this->user->getYCoord();
+		
+		if($xCoord == $this->user->getXCoord())
+		{
+			if ($xCoord > 1)
+			{
+				$this->user->setXCoord(--$xCoord);
+				$this->moveSuccess();
+			}
+			else
+			{
+				$this->setFlashIllegalMove();
+			}
+		}
 
-    	if ($y_coord > 1)
-    	{
-    		$this->user->setYCoord($y_coord--);
-            $this->moveSuccess(1);
-    	}
-    	else
-    	{
-    		// Can't move down
-    	}
+		return $this->redirectToRoute('home');
 
     }
 
-    public function moveLeftAction()
+    public function moveRightAction($xCoord)
     {
 		$this->user = $this->getUser();
-    	$x_coord = $this->user->getXCoord();
+		$system = $this->getDoctrine()->getRepository('GalacticBundle:System')->find($this->user->getSystem());
 
-    	if ($x_coord > 1)
-    	{
-    		$this->user->setXCoord($x_coord--);
-            $this->moveSuccess(1);
-    	}
-    	else
-    	{
-    		// Can't move left
-    	}
+		if($xCoord == $this->user->getXCoord())
+		{
+			if ($xCoord < $system->getSize())
+			{
+				$this->user->setXCoord(++$xCoord);
+				$this->moveSuccess();
+			}
+			else
+			{
+				$this->setFlashIllegalMove();
+			}
+		}
 
+		return $this->redirectToRoute('home');
     }
 
-    public function moveRightAction()
+    private function moveSuccess()
     {
-		$this->user = $this->getUser();
-    	$x_coord = $this->user->getXCoord();
+        $this->user->setXP($this->user->getXp() + 1);
+		$this->user->setTurns($this->user->getTurns() - 1);
 
-    	if ($x_coord < $this->system_size)
-    	{
-    		$this->user->setXCoord($x_coord++);
-            $this->moveSuccess(1);
-    	}
-    	else
-    	{
-    		// Can't move right
-    	}
+		//Save user data
+		$em = $this->getDoctrine()->getManager();
+		$em->persist($this->user);
+		$em->flush();
     }
 
-    private function moveSuccess($xp)
+    private function setFlashIllegalMove()
     {
-        $this->user->setXP($this->user->getXP() + 1);
+        $this->get('session')->getFlashBag()->add('notice', 'Unable to move there.');
     }
 }

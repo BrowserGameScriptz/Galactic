@@ -2,6 +2,18 @@ home:
     path:   /
     defaults:   { _controller: GalacticBundle:Default:index }
     
-moveup:
-    path:   /move/up
+move_up:
+    path:   /move/up/{yCoord}
     defaults:   { _controller: GalacticBundle:Navigation:moveUp }
+    
+move_down:
+    path:   /move/down/{yCoord}
+    defaults:   { _controller: GalacticBundle:Navigation:moveDown }
+    
+move_left:
+    path:   /move/left/{xCoord}
+    defaults:   { _controller: GalacticBundle:Navigation:moveLeft }
+    
+move_right:
+    path:   /move/right/{xCoord}
+    defaults:   { _controller: GalacticBundle:Navigation:moveRight }

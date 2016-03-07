@@ -16,19 +16,19 @@ class SecurityController extends Controller
         print '</pre>';
         die;
     }
-    
+
     public function loginAction(Request $request)
-    {        
+    {
         $authenticationUtils = $this->get('security.authentication_utils');
-    
+
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
-    
+
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
-        
+
         $registeredUsername = $request->get('username');
-    
+
         return $this->render(
             'AppBundle::login.html.twig',
             array(
@@ -39,20 +39,19 @@ class SecurityController extends Controller
             )
         );
     }
-    
+
     public function registerAction(Request $request)
     {
         $user = new User();
-        $form = $this->createForm(UserType::class, $user);      
-
+        $form = $this->createForm(UserType::class, $user);
 
         $form->handleRequest($request);
-        
+
         if ($form->isSubmitted() && $form->isValid()) {
-            
+
             $password = $this->get('security.password_encoder')
                 ->encodePassword($user, $user->getPlainPassword());
-                
+
             $user->setPassword($password);
             $user->setTurns('1000');
             $user->setProtectedTurns('500');
@@ -62,6 +61,7 @@ class SecurityController extends Controller
             $user->setXCoord('10');
             $user->setYCoord('10');
             $user->setLastAction(new \DateTime);
+            $user->setDocked(FALSE);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);

@@ -3,20 +3,57 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
+
     <div id="top-bar">
         <div id="minimap">
             <table>
-                {% for row in 1..5 %}
-                <tr>
-                    {% for column in 1..5 %}
-                        <td></td>
-                    {% endfor %}
-                </tr>
+                {% for row in -1..1 %}
+                    <tr>
+                    {% set y = app.user.yCoord + row %}
+                        {% for column in -1..1 %}
+                            {% set x = app.user.xCoord + column %}
+                            <td class='sector{% if row == 0 and column == 0 %} current{% endif %}'>
+                                {% if x >= 1 and x <= 20 %}
+                                    {% if y >= 1 and y <= 20 %}
+                                        {{y}},{{x}}
+                                    {% endif %}
+                                {% endif %}
+                            </td>
+                        {% endfor %}
+                    </tr>
                 {% endfor %}
             </table>
         </div>
-        <div id="notices"></div>
-        <div id="navigation"></div>
+        <div id="notices">
+            <div>Global Notifications</div>
+            <div>{{"2016-03-06 16:30:02" | date("H:i:s")}} Player1 was killed by Player2 in System(x,y)</div>
+            <div>{{"2016-03-06 16:05:11" | date("H:i:s")}} Player2 was killed by Player3 in System(x,y)</div>
+            <div>{{"2016-03-06 16:00:34" | date("H:i:s")}} Player1 was killed by Player3 in System(x,y)</div>
+        </div>
+        <div id="navigation">
+            <table>
+                <tr>
+                    <td></td>
+                    <td><a href="move/up/{{app.user.yCoord}}">Up</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="move/left/{{app.user.xCoord}}">Left</a></td>
+                    <td></td>
+                    <td><a href="move/right/{{app.user.xCoord}}">Right</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="move/down/{{app.user.yCoord}}">Down</a></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
         <div class="clear-left"></div>
     </div>
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div>
+           {{ flashMessage }}
+        </div>
+    {% endfor %}
 {% endblock %}
